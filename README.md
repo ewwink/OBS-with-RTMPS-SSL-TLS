@@ -1,5 +1,5 @@
-# OBS-with-RTMPS-SSL-TLS
-Open Broadcaster Software (OBS) with RTMPS SSL TLS OpenSSL Support
+# OBS with RTMPS (secure RTMP)
+Open Broadcaster Software (OBS) with RTMPS SSL TLS OpenSSL support, compiled to solve problem with facebook server that not accepting normal rtmp.
 
 Features
 - Added support for RTMPS (SSL/TLS/OpenSSL)
