@@ -6,6 +6,7 @@ Open Broadcaster Software (OBS) version 18.0.1 with RTMPS SSL TLS OpenSSL suppor
 
 **Requirement**
 - Visual C++ Redistributable for Visual Studio 2015
+- Visual C++ Redistributable for Visual Studio 2013 
 
 **Download Compiled Binary:** 
 - https://github.com/ewwink/OBS-with-RTMPS-SSL-TLS/releases 
@@ -104,11 +105,8 @@ Configuring done
 -  Click **`Open Project`** button and you're now have `obs-studio.sln` to compile with Visual Studio 2013/2015
 -  if there error while compile `vlc/libvlc_structures.h not found` edit `D:\obs-studio\deps\win32\include\vlc\libvlc.h` and replace
   
-`#include <vlc/libvlc_structures.h>`
-
-with
-
-`#include <libvlc_structures.h>`
+`#include <vlc/libvlc_structures.h>` with `#include <libvlc_structures.h>`
+- in visual studio change all **Debug** to **Release** in the **Build > Configuration Manager**
 
 ----------
 
