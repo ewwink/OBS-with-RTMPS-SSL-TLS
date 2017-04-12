@@ -18,6 +18,7 @@ Open Broadcaster Software (OBS) version 18.0.1 with RTMPS SSL TLS OpenSSL suppor
 This build example for `win32`
 - install Visual Studio 2013 (Latest update) or Visual Studio 2015
 - install Qt: http://www.qt.io/
+- in Qt installation wizard make sure **Qt 5.8** -> **msvc2015 32-bit** and **msvc2013 32-bit** is checked
 - install Windows version of cmake: http://www.cmake.org/
 - install **Win32 OpenSSL v1.0.2k** (other version may fail): http://slproweb.com/products/Win32OpenSSL.html
 - clone official repository, for example to `D:\obs-studio`
