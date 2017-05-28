@@ -8,12 +8,15 @@ Open Broadcaster Software (OBS) version 18.0.1 with RTMPS SSL TLS OpenSSL suppor
 - Visual C++ Redistributable for Visual Studio 2015
 - Visual C++ Redistributable for Visual Studio 2013 
 
-**Download Compiled Binary:** 
+**Download Compiled Windows Binary:** 
 - https://github.com/ewwink/OBS-with-RTMPS-SSL-TLS/releases 
 
+**Build OBS with RTMPS Support**
+- [For Windows](#compile-obs-windows-with-rtmps-support)
+- [For Linux](#compile-obs-linux-with-rtmps-support)
 ----------
 
-**Compile OBS with RTMPS Support**
+## Compile OBS Windows with RTMPS Support
 
 This build example for `win32`
 - install Visual Studio 2013 (Latest update) or Visual Studio 2015
@@ -108,6 +111,22 @@ Configuring done
   
 `#include <vlc/libvlc_structures.h>` with `#include <libvlc_structures.h>`
 - in visual studio change all **Debug** to **Release** in the **Build > Configuration Manager**
+
+## Compile OBS Linux with RTMPS Support
+follow instuction on https://github.com/jp9000/obs-studio/wiki/Install-Instructions#linux
+
+for Centos and other distro if you get error:
+```
+CMake Error at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:108 (message):
+  Could NOT find FFmpeg (missing: FFMPEG_AVCODEC_LIBRARIES
+  FFMPEG_AVCODEC_INCLUDE_DIRS avcodec avdevice avutil avformat)
+```
+install `ffmpeg-devel`
+
+Then You only need Add extra parameter `-DUSE_SSL=ON` to `cmake` to activate RTMPS/SSL
+```
+cmake -DUSE_SSL=ON -DUNIX_STRUCTURE=1 ..
+```
 
 ----------
 
